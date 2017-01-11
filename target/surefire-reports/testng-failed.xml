@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" verbose="0" name="Failed suite [Suite1]" parallel="tests">
+  <parameter name="password" value="devendra@9099"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="username" value="devendraa18"/>
+  <test name="ChromeTest(failed)" parallel="tests" preserve-order="true">
+    <parameter name="password" value="devendra@9099"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="username" value="devendraa18"/>
+    <classes>
+      <class name="com.sample.FreechargeLogin">
+        <methods>
+          <include name="loginToFreecharge"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="wordPressLogin" invocation-numbers="0"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

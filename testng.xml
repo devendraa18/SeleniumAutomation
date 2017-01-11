@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" thread-count="2" parallel = "none">
+	<listeners>
+	<listener class-name="com.sample.WordPressLogin" />
+	</listeners>
+  <test name="FirefoxTest">
+  <parameter name= "browser" value = "firefox"/>F
+  <parameter name="username" value="devendraa18"/>
+  <parameter name="password" value="devendra@9099"/>
+    <classes>
+       <class name="com.sample.WordPressLogin" />
+    </classes>
+  </test>
+  
+  <test name="ChromeTest">
+  <parameter name= "browser" value = "chrome"/>
+  <parameter name="username" value="devendraa18"/>
+  <parameter name="password" value="devendra@9099"/>
+    <classes>
+       <class name="com.sample.WordPressLogin" />
+    </classes>
+  </test>
+ </suite>

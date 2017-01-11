@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Suite1]" parallel="none">
+  <parameter name="password" value="devendra@9099"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="username" value="devendraa18"/>
+  <listeners>
+    <listener class-name="com.sample.WordPressLogin"/>
+  </listeners>
+  <test name="ChromeTest(failed)" parallel="none" preserve-order="true">
+    <parameter name="password" value="devendra@9099"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="username" value="devendraa18"/>
+    <classes>
+      <class name="com.sample.WordPressLogin">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="wordPressLogin" invocation-numbers="0"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
